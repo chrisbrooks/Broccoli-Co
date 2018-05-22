@@ -1,0 +1,75 @@
+/// Colors
+$white: #FFFFFF !default;
+$primary-grey: #E4E4E4 !default;
+$secondary-grey: #808080 !default;
+$ternary-grey: #A0A0A0 !default;
+$primary-green: #52D765 !default;
+$secondary-green: #5FC16B !default;
+$primary-black: #27343B !default;
+$primary-background: $white !default;
+$secondary-background: #FAFAFB !default;
+$body-background: #E4E4E7 !default;
+$primary-blue: #41C6F1 !default;
+$secondary-blue: #25749c !default;
+$ternary-blue: #22568f !default;
+$primary-error: #FF1826 !default;
+$primary-orange: #FF470B !default;
+
+//Live request Colors
+$job-primary-green: #0A8D91 !default;
+$job-primary-blue: #0036CA !default;
+$job-primary-purple: #C548C2 !default;
+$job-primary-yellow: #FFB910 !default;
+$job-primary-orange: #F58027 !default;
+$job-secondary-green: #65D5DD !default;
+
+/// Sizes for padding / margins etc
+$xxs: 6px;
+$xs: 10px;
+$sm: 16px;
+$md: 26px;
+$lg: 36px;
+
+/// Sizes for font / line height
+$font-extra-small: 10px;
+$line-height-extra-small: 10px;
+
+$font-small: 12px;
+$line-height-small: 18px;
+
+$font-standard: 14px;
+$line-height-standard: 21px;
+
+$font-medium: 16px;
+$line-height-medium: 24px;
+
+$font-medium-large: 18px;
+$line-height-medium-large: 27px;
+
+$font-large: 22px;
+$line-height-large: 33px;
+
+// Border sizes
+$border-small:  1px;
+$border-medium: 2px;
+$border-large: 3px;
+
+/// Container's maximum width
+$max-width: 870px !default;
+
+/// LandingPage max width;
+$landing-max-width: 430px !default;
+
+// Header hideRightMenu
+$header-height: 51px;
+
+/// Breakpoints map
+$breakpoint-small: 320px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+
+//left nav width
+$nav-width: 199px;
+
+//Icons sizes
+$icon-size-small-medium: 20px;

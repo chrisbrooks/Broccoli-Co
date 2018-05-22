@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
 import AppWithData from 'containers/App/AppWithData';
+import './sass/main.scss';
 import registerServiceWorker from './registerServiceWorker';
 import configureStore from './configureStore';
 

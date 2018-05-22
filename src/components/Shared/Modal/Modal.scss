@@ -1,0 +1,60 @@
+@import "shared.scss";
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 101;
+  background-color: rgba(128, 128, 128, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Container {
+  height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+
+  @include medium-large {
+    padding: 80px 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+.Inner {
+  margin: auto;
+}
+
+.Modal {
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+
+  @include small {
+    min-height: 100vh;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    padding-bottom: 83px;
+  }
+
+  @include medium-large {
+    border-radius: 0;
+  }
+}
+
+/* Added by React-Modal. Stops scrolling on the body when
+   the modal is open. */
+body:global(.ReactModal__Body--open) {
+  overflow: hidden;
+}
