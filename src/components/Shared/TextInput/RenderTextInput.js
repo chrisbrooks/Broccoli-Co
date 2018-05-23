@@ -9,7 +9,6 @@ const renderTextInput = ({
   className,
   placeholder,
   label,
-  hideLabel,
   type,
   meta: {
     touched,
@@ -17,10 +16,10 @@ const renderTextInput = ({
   }
 }) => (
   <div
-    className={cx('p-rel', className, {
+    className={cx(className, styles.Container, {
       'has-error': touched && error
     })}>
-    <label className={hideLabel ? styles.HideLabel : ''}>{label}</label>
+    <label>{label}</label>
     <input
       type={type}
       {...input}
@@ -37,12 +36,7 @@ renderTextInput.propTypes = {
   placeholder: PropTypes.string,
   label: PropTypes.string,
   type: PropTypes.string,
-  guide: PropTypes.string,
-  image: PropTypes.string,
-  icon: PropTypes.string,
   meta: PropTypes.object,
-  overrideTouched: PropTypes.bool,
-  hideLabel: PropTypes.bool
 };
 
 export default renderTextInput;

@@ -4,8 +4,10 @@ import { Field, reduxForm } from 'redux-form';
 
 import RenderTextInput from 'components/Shared/TextInput/RenderTextInput';
 import Modal from 'components/Shared/Modal/Modal';
+import Form from 'components/Shared/Form/Form';
 import BlockButton from 'components/Shared/BlockButton/BlockButton';
 import { required, email, confirmEmail } from 'utils/fieldValidation';
+import styles from './appForm.scss';
 
 const fullNameValidation = required('Full name');
 const emailValidation = [required('Email'), email];
@@ -39,54 +41,51 @@ export class AppModal extends Component {
   render() {
 
     const {
-      handleSubmit, // redux
+      handleSubmit,
       toggleModal,
-      pristine
+      pristine,
+      valid
     } = this.props;
 
     return (
       <Modal
         isOpen={toggleModal}
         onRequestClose={this.handleOnRequestClose}>
-        <div>
-          <form>
-            <Field
-              name="firstName"
-              label="First name"
-              hideLabel
-              validate={fullNameValidation}
-              placeholder="First name"
-              type="text"
-              component={RenderTextInput}
-            />
-            <Field
-              name="email"
-              label="Email"
-              hideLabel
-              validate={emailValidation}
-              placeholder="Email"
-              type="text"
-              component={RenderTextInput}
-            />
-            <Field
-              name="confirmEmail"
-              label="Confirm Email"
-              hideLabel
-              validate={confirmEmailValidation}
-              placeholder="Confirm Email"
-              type="text"
-              component={RenderTextInput}
-            />
-          </form>
+        <Form
+          WithoutLabels>
+          <Field
+            name="firstName"
+            label="First name"
+            validate={fullNameValidation}
+            placeholder="First name"
+            type="text"
+            component={RenderTextInput}
+          />
+          <Field
+            name="email"
+            label="Email"
+            validate={emailValidation}
+            placeholder="Email"
+            type="email"
+            component={RenderTextInput}
+          />
+          <Field
+            name="confirmEmail"
+            label="Confirm Email"
+            validate={confirmEmailValidation}
+            placeholder="Confirm Email"
+            type="email"
+            component={RenderTextInput}
+          />
           <BlockButton
-            className="pull-right submit"
+            className={styles.Button}
             primary
             loading={this.state.isPostingData}
-            disabled={pristine || this.state.isPostingData}
+            disabled={!valid || pristine || this.state.isPostingData}
             onClick={handleSubmit(this.submitForm)}>
-            SEND INVITATIONS
+            SEND
           </BlockButton>
-        </div>
+        </Form>
       </Modal>
     );
 
@@ -98,7 +97,8 @@ AppModal.propTypes = {
   handleSubmit: PropTypes.func,
   onRequestClose: PropTypes.func,
   toggleModal: PropTypes.bool,
-  pristine: PropTypes.bool
+  pristine: PropTypes.bool,
+  valid: PropTypes.bool
 };
 
 const withReduxForm = reduxForm({

@@ -38,9 +38,9 @@ $loadingIconMargin: -(($loadingIconSize + $loadingIconThickness * 2) / 2);
 }
 
 .Disabled {
-  composes: Button;
-  color: $secondary-grey !important;
-  background-color: $primary-grey;
+  background-color: rgba(0,0,0,0.2);
+  border: 1px solid $secondary-grey;
+  background: $black;
   cursor: default;
 }
 

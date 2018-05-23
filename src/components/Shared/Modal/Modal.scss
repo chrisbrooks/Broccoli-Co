@@ -7,7 +7,7 @@
   height: 100%;
   width: 100%;
   z-index: 101;
-  background-color: rgba(128, 128, 128, 0.45);
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,8 +36,7 @@
 .Modal {
   -webkit-overflow-scrolling: touch;
   outline: none;
-  width: 800px;
-  max-width: 100%;
+  width: 500px;
   height: auto;
 
   @include small {

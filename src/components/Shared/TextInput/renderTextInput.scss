@@ -1,5 +1,9 @@
 @import "shared.scss";
 
+.Container {
+  margin-bottom: $xs;
+}
+
 .HideLabel {
   visibility: hidden;
   height: 0;
@@ -9,4 +13,5 @@
 
 .ErrorMessage {
   color: red;
+  letter-spacing: 2px;
 }
