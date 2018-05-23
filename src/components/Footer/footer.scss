@@ -1,0 +1,22 @@
+@import "shared.scss";
+
+.Container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  p {
+    font-size: $font-medium;
+    color: #ccc;
+    margin-left: 40px;
+    letter-spacing: 5px;
+    margin-bottom: $xs;
+    &:last-child {
+      margin-bottom: $lg;
+    }
+    span {
+      color: $primary-yellow;
+    }
+  }
+}

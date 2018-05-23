@@ -11,9 +11,6 @@ const renderTextInput = ({
   label,
   hideLabel,
   type,
-  guide,
-  image,
-  overrideTouched,
   meta: {
     touched,
     error
@@ -21,23 +18,15 @@ const renderTextInput = ({
 }) => (
   <div
     className={cx('p-rel', className, {
-      'has-error': (touched || overrideTouched) && error
+      'has-error': touched && error
     })}>
-    <label className={hideLabel ? 'hide-label' : ''}>{label}</label>
-    {
-      guide && <span className={styles.Guide}>{guide}</span>
-    }
-    {image && <img
-      className={styles.Image}
-      src={image}
-      alt="" />
-    }
+    <label className={hideLabel ? styles.HideLabel : ''}>{label}</label>
     <input
       type={type}
       {...input}
       placeholder={placeholder} />
     {
-      (touched || overrideTouched) && (error && <div className="error-message">{error}</div>)
+      touched && (error && <div className={styles.ErrorMessage}>{error}</div>)
     }
   </div>
 );

@@ -5,7 +5,11 @@ import { Field, reduxForm } from 'redux-form';
 import RenderTextInput from 'components/Shared/TextInput/RenderTextInput';
 import Modal from 'components/Shared/Modal/Modal';
 import BlockButton from 'components/Shared/BlockButton/BlockButton';
-import { required } from 'utils/fieldValidation';
+import { required, email, confirmEmail } from 'utils/fieldValidation';
+
+const fullNameValidation = required('Full name');
+const emailValidation = [required('Email'), email];
+const confirmEmailValidation = [required('Email'), confirmEmail];
 
 export class AppModal extends Component {
 
@@ -50,10 +54,26 @@ export class AppModal extends Component {
               name="firstName"
               label="First name"
               hideLabel
-              validate={[
-                required('First name')
-              ]}
+              validate={fullNameValidation}
               placeholder="First name"
+              type="text"
+              component={RenderTextInput}
+            />
+            <Field
+              name="email"
+              label="Email"
+              hideLabel
+              validate={emailValidation}
+              placeholder="Email"
+              type="text"
+              component={RenderTextInput}
+            />
+            <Field
+              name="confirmEmail"
+              label="Confirm Email"
+              hideLabel
+              validate={confirmEmailValidation}
+              placeholder="Confirm Email"
               type="text"
               component={RenderTextInput}
             />

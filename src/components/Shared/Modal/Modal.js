@@ -24,8 +24,10 @@ const Modal = props => (
   </ReactModal>
 );
 
+ReactModal.setAppElement('#root');
+
 Modal.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.object,
   contentLabel: PropTypes.string,
   onRequestClose: PropTypes.func
 };

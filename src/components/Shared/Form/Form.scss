@@ -1,0 +1,58 @@
+@import "shared.scss";
+
+.Form {
+
+  // label {
+  //   display: block;
+  //   margin-bottom: $xxs;
+  //   line-height: $font-standard;
+  // }
+  //
+  // input[type='text'],
+  // input[type='password'],
+  // input[type='email'],
+  // input[type='number'],
+  // textarea {
+  //   display: block;
+  //   width: 100%;
+  //   padding: 6px 14px;
+  //   font-family: $text-font-stack;
+  //   font-size: $font-medium;
+  //   line-height: $line-height-standard;
+  //   color: $primary-black;
+  //   background-color: $white;
+  //   background-image: none;
+  //   border: $border-small solid $primary-grey;
+  //   border-radius: $xxs / 2;
+  //   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  //   box-sizing: border-box;
+  //   height: 49px;
+  //   -webkit-appearance: none;
+  //   @include medium-large {
+  //     height: 34px;
+  //     font-size: $font-standard;
+  //   }
+  //
+  //   &:focus {
+  //     border-color: $primary-blue;
+  //     outline: 0;
+  //   }
+  // }
+
+  ::placeholder  {
+    color: $ternary-grey;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+}
+
+.WithoutLabels {
+  label {
+    visibility: hidden;
+    height: 0;
+    margin-bottom: 0;
+  }
+}

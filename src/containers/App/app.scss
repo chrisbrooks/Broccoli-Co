@@ -1,3 +1,48 @@
+@import "shared.scss";
+
 .Container {
-  background: red;
+  height: 100vh;
+  background: url('./images/sydney.jpg');
+  background-size: cover;
+}
+
+.InnerContainer {
+  background: rgba(0,0,0,.5);
+  height: 100%;
+}
+
+.BannerContainer {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Banner {
+  margin-top: -($nav-height);
+  h1 {
+    text-align: center;
+    color: $white;
+    font-family: $titleFont;
+    letter-spacing: 10px;
+    font-weight: 700;
+    font-size: $lg * 2;
+    margin-bottom: $lg;
+    span {
+      color: $primary-yellow;
+    }
+  }
+  p {
+    font-size: 19px;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+    margin-bottom: ($lg + $md);
+  }
+}
+
+.Button {
+  margin: 0 auto;
+  display: inherit;
 }

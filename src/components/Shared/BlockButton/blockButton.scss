@@ -5,17 +5,14 @@ $loadingIconThickness: 4px;
 $loadingIconMargin: -(($loadingIconSize + $loadingIconThickness * 2) / 2);
 
 .Button {
-  width: 100%;
-  max-width: 220px;
   height: 50px;
   border-radius: 3px;
   text-transform: uppercase;
   position: relative;
-  padding: 0 $sm;
-
-  @include medium-large {
-    height: 38px;
-  }
+  padding: $sm $md;
+  letter-spacing: 5px;
+  border-radius: 50px;
+  cursor: pointer;
 
   &:focus {
     outline:0;
@@ -25,11 +22,11 @@ $loadingIconMargin: -(($loadingIconSize + $loadingIconThickness * 2) / 2);
 
 .Primary {
   composes: Button;
-  color: $primary-background;
-  background-color: $primary-green;
+  color: $white;
+  background-color: rgba(0,0,0,0.2);
 
   &:hover {
-    background-color: $secondary-green;
+    background-color: rgba(0,0,0,0.5);
   }
 }
 

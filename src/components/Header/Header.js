@@ -1,8 +1,10 @@
 import React from 'react';
 
+import styles from './header.scss';
+
 const Header = () => (
-  <header>
-    <h1>Broccoli &amp; Co.</h1>
+  <header className={styles.Container}>
+    <p>Broccoli &amp; Co.</p>
   </header>
 );
 
