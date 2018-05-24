@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 
 import Header from 'components/Header/Header';
@@ -36,7 +35,7 @@ export class App extends Component {
           <Header />
           <div className={styles.BannerContainer}>
             <section className={styles.Banner}>
-              <h1>A better way<br/> to enjoy <span>every day.</span></h1>
+              <h1>A better way<br /> to enjoy <span>every day.</span></h1>
               <p>Be the first to know when we launch</p>
               <BlockButton
                 className={styles.Button}
