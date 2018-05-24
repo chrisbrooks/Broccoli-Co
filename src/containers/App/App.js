@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Header from 'components/Header/Header';
 import Footer from 'components/Footer/Footer';
 import BlockButton from 'components/Shared/BlockButton/BlockButton';
-import AppForm from './AppForm';
+import AppFormWithData from './AppForm/AppFormWithData';
 import styles from './app.scss';
 
 export class App extends Component {
@@ -46,7 +46,7 @@ export class App extends Component {
               </BlockButton>
             </section>
           </div>
-          <AppForm
+          <AppFormWithData
             toggleModal={this.state.toggleModal}
             onRequestClose={this.handleCloseModal} />
           <Footer />

@@ -1,0 +1,17 @@
+@import "shared.scss";
+
+.Button {
+  margin-top: $lg;
+  width: 100%;
+}
+
+.Title {
+  font-size: $lg;
+  color: white;
+  text-align: center;
+  margin-bottom: $lg;
+
+  span {
+    color: $primary-yellow;
+  }
+}

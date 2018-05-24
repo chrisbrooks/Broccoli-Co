@@ -20,25 +20,54 @@
 
 .Banner {
   margin-top: -($nav-height);
+  padding: 0 $md;
   h1 {
     text-align: center;
     color: $white;
     font-family: $titleFont;
-    letter-spacing: 10px;
-    font-weight: 700;
-    font-size: $lg * 2;
-    margin-bottom: $lg;
+    letter-spacing: $xxs / 2;
+    font-weight: $font-weight-bold;
+    font-size: $lg;
+    margin-bottom: $md;
+    line-height: inherit;
+
     span {
       color: $primary-yellow;
     }
+
+    @include medium {
+      font-size: $lg + $xs;
+      margin-bottom: $md;
+      line-height: $lg + $md;
+    }
+
+    @include large {
+      margin-bottom: $lg;
+      font-size: $lg * 2;
+      letter-spacing: $xxs;
+      line-height: inherit;
+    }
   }
   p {
-    font-size: 19px;
+    font-size: $font-medium;
     color: $white;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 10px;
-    margin-bottom: ($lg + $md);
+    letter-spacing: $xxs / 2;
+    margin-bottom: $lg;
+    line-height: $md;
+
+    @include medium {
+      letter-spacing: $xxs;
+      line-height: inherit;
+    }
+
+    @include large {
+      font-size: $font-medium + 3;
+      letter-spacing: $xs;
+      line-height: inherit;
+      margin-bottom: ($lg + $md);
+    }
   }
 }
 

@@ -9,9 +9,9 @@
   p {
     font-size: $font-medium;
     color: #ccc;
-    margin-left: 40px;
     letter-spacing: 3px;
     margin-bottom: $xs;
+    line-height: $font-medium-line-height;
     &:last-child {
       margin-bottom: $lg;
     }

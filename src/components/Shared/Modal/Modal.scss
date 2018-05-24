@@ -40,16 +40,18 @@
   height: auto;
 
   @include small {
-    min-height: 100vh;
-    border: none;
-    border-radius: 0;
-    position: relative;
-    padding-bottom: 83px;
+    padding: $lg;
+    width: auto;
   }
+}
 
-  @include medium-large {
-    border-radius: 0;
-  }
+.Close {
+  margin-bottom: $md;
+  text-align: right;
+  font-size: $lg;
+  color: $white;
+  cursor: pointer;
+  font-family: $defaultFont;
 }
 
 /* Added by React-Modal. Stops scrolling on the body when

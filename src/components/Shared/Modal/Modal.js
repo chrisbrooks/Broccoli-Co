@@ -15,8 +15,9 @@ const Modal = props => (
     <div className={styles.Inner}>
       <div className={styles.Modal}>
         <div
+          className={styles.Close}
           onClick={() => props.onRequestClose()}>
-          x
+          &times;
         </div>
         {props.children}
       </div>

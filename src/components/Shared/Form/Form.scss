@@ -12,10 +12,10 @@
     color: $white;
     background: none;
     border: none;
-    border-bottom: $border-small solid $primary-grey;
+    border-bottom: $border-small solid $white;
     box-sizing: border-box;
-    height: 50px;
-    margin-bottom: $xxs;
+    height: $lg + $xxs;
+    margin-bottom: $xs;
 
     &:focus {
       border-color: $primary-yellow;

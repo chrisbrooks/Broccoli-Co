@@ -14,3 +14,13 @@ export const confirmEmail = (value) => {
 
   return undefined;
 };
+
+export const minLength = (field, length) => (value) => {
+  const min = length || 3;
+
+  if (value && value.trim().length < min) {
+    return `${field} must be no less than ${min} characters`;
+  }
+
+  return undefined;
+};

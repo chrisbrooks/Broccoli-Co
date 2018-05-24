@@ -1,25 +1,12 @@
 /// fonts
+$defaultFont: sans-serif;
 $textFont: 'Roboto Condensed', sans-serif;
 $titleFont: 'Open Sans', sans-serif;
 
 /// Colors
 $white: #FFFFFF !default;
 $black: #000000 !default;
-$primary-grey: #E4E4E4 !default;
 $secondary-grey: #808080 !default;
-$ternary-grey: #A0A0A0 !default;
-$primary-green: #52D765 !default;
-$secondary-green: #5FC16B !default;
-$primary-black: #27343B !default;
-$primary-background: $white !default;
-$secondary-background: #FAFAFB !default;
-$body-background: #E4E4E7 !default;
-$primary-blue: #41C6F1 !default;
-$secondary-blue: #25749c !default;
-$ternary-blue: #22568f !default;
-$primary-error: #FF1826 !default;
-$primary-orange: #FF470B !default;
-
 $primary-yellow: #f2c50e !default;
 
 /// Sizes for padding / margins etc
@@ -34,8 +21,12 @@ $font-extra-small: 10px;
 $font-small: 12px;
 $font-standard: 14px;
 $font-medium: 16px;
+$font-medium-line-height: $md;
 $font-medium-large: 18px;
 $font-large: 22px;
+
+/// font weights
+$font-weight-bold: 700;
 
 // Border sizes
 $border-small:  1px;

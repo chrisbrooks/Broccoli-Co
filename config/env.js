@@ -76,6 +76,9 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
+        // could use a npm config for this instead but i'm assuming this would be an api served from the environment
+        // that we would be using even though it's static for now
+        API_END_POINT: 'https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com'
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin

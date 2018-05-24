@@ -33,7 +33,7 @@ $loadingIconMargin: -(($loadingIconSize + $loadingIconThickness * 2) / 2);
 .Secondary {
   composes: Button;
   color: $secondary-grey;
-  background-color: $primary-background;
+  background-color: $white;
   border: 1px solid $secondary-grey;
 }
 
