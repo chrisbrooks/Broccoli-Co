@@ -27,8 +27,8 @@
     font-family: $titleFont;
     letter-spacing: $xxs / 2;
     font-weight: $font-weight-bold;
-    font-size: $lg;
-    margin-bottom: $md;
+    font-size: $lg + $xxs;
+    margin-bottom: $lg;
     line-height: inherit;
 
     span {
@@ -49,15 +49,16 @@
     }
   }
   p {
-    font-size: $font-medium;
+    font-size: $font-large;
     color: $white;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: $xxs / 2;
     margin-bottom: $lg;
-    line-height: $md;
+    line-height: $lg;
 
     @include medium {
+      font-size: $font-medium + 3;
       letter-spacing: $xxs;
       line-height: inherit;
     }

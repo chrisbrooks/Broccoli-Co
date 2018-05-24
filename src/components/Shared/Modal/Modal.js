@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
@@ -8,7 +7,6 @@ const Modal = props => (
   <ReactModal
     {...props}
     shouldCloseOnOverlayClick={false}
-    closeTimeoutMS={300}
     className={styles.Container}
     overlayClassName={styles.Overlay}
   >
@@ -25,7 +23,7 @@ const Modal = props => (
   </ReactModal>
 );
 
-ReactModal.setAppElement('#root');
+ReactModal.setAppElement('body');
 
 Modal.propTypes = {
   children: PropTypes.object,

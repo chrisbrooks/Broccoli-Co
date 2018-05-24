@@ -15,3 +15,17 @@
     color: $primary-yellow;
   }
 }
+
+.Error {
+  color: $primary-red;
+  text-align: center;
+  margin-top: $md;
+}
+
+.SuccessText {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: $font-medium-line-height;
+  text-align: center;
+}

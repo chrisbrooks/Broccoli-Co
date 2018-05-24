@@ -10,7 +10,7 @@ const appForm = (state = initialState, action) => {
     case ACTIONS.SIGNUP_SUCCESS:
       return {
         ...state,
-        signUpSuccess: action.payload,
+        signUpSuccess: true
       };
     case ACTIONS.SIGNUP_FAILURE:
       return {
@@ -18,6 +18,8 @@ const appForm = (state = initialState, action) => {
         signUpSuccess: action.payload.signUpSuccess,
         signUpError: action.payload.signUpError
       };
+    case ACTIONS.RESET:
+      return initialState;
     default:
       return state;
   }

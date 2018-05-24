@@ -3,8 +3,8 @@ import thunk from 'redux-thunk';
 import moxios from 'moxios';
 import axios from 'axios';
 
-import * as actions from '../app.actions';
-import * as ACTIONS from '../app.actionTypes';
+import * as actions from '../appForm.actions';
+import * as ACTIONS from '../appForm.actionTypes';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
@@ -19,63 +19,60 @@ describe('action creator tests', () => {
     moxios.uninstall();
   });
 
-  it('should call the correct actions for getUserLocation', () => {
+  it('should call the correct actions for postSignUpForm', () => {
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
         status: 200,
-        response: {
-          country: 'AU'
-        },
+        response: 'sdsdsd'
       });
     });
 
     const expectedActions = [
       {
-        type: ACTIONS.GET_USER_LOCATION_SUCCESS,
-        payload: {
-          country: 'AU'
-        }
+        type: ACTIONS.SIGNUP_SUCCESS,
+        payload: true
       }
     ];
 
     const store = mockStore({});
-    return store.dispatch(actions.getUserLocation()).then(() => {
+    return store.dispatch(actions.postSignUpForm()).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
   });
 
-  it('should call the correct actions for getUserLocation', () => {
+  it('should call the correct actions for postSignUpForm', () => {
     moxios.wait(() => {
       const request = moxios.requests.mostRecent();
       request.respondWith({
         status: 400,
         response: {
-          country: 'AU'
-        },
+          errorMessage: 'this is an error'
+        }
       });
     });
 
     const expectedActions = [
       {
-        type: ACTIONS.GET_USER_LOCATION_FAILURE,
+        type: ACTIONS.SIGNUP_FAILURE,
         payload: {
-          country: 'AU'
+          signUpError: 'this is an error',
+          signUpSuccess: false
         }
       }
     ];
 
     const store = mockStore({});
-    return store.dispatch(actions.getUserLocation()).then(() => {
+    return store.dispatch(actions.postSignUpForm()).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
   });
 
-  it('should return correct action for TOGGLE_LEFT_SIDEBAR', () => {
+  it('should return correct action for RESET', () => {
     const expectedAction = {
-      type: ACTIONS.TOGGLE_LEFT_SIDEBAR
+      type: ACTIONS.RESET
     };
-    expect(actions.toggleLeftSidebar()).toEqual(expectedAction);
+    expect(actions.resetStore()).toEqual(expectedAction);
   });
 
 });

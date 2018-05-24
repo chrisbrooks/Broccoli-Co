@@ -7,13 +7,16 @@
   text-align: center;
 
   p {
-    font-size: $font-medium;
+    font-size: $font-small;
     color: #ccc;
-    letter-spacing: 3px;
-    margin-bottom: $xs;
+    letter-spacing: $xxs / 2;
+    margin-bottom: $sm;
     line-height: $font-medium-line-height;
-    &:last-child {
-      margin-bottom: $lg;
+    padding: 0 $sm;
+
+    @include medium-large {
+      font-size: $font-medium;
+      margin-bottom: $md;
     }
     span {
       color: $primary-yellow;
