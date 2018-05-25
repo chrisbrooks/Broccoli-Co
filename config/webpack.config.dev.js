@@ -134,7 +134,8 @@ module.exports = {
             loader: require.resolve('eslint-loader')
           }
         ],
-        include: paths.appSrc
+        include: paths.appSrc,
+        exclude: paths.appSrc + '/registerServiceWorker'
       },
       {
         // "oneOf" will traverse all following loaders until one will
