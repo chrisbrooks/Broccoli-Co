@@ -16,9 +16,7 @@ const renderTextInput = ({
   }
 }) => (
   <div
-    className={cx(className, styles.Container, {
-      'has-error': touched && error
-    })}>
+    className={cx(className, styles.Container)}>
     <label>{label}</label>
     <input
       type={type}

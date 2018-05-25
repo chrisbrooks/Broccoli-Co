@@ -78,7 +78,12 @@
       "<rootDir>/src/**/*.{js,jsx}"
     ],
     "coveragePathIgnorePatterns": [
-      "<rootDir>/src/registerServiceWorker.js"
+      "<rootDir>/src/configureStore.js",
+      "<rootDir>/src/registerServiceWorker.js",
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/containers/App/AppForm/AppFormWithData.js",
+      "<rootDir>/src/components/Header/Header.js",
+      "<rootDir>/src/components/Footer/Footer.js"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"

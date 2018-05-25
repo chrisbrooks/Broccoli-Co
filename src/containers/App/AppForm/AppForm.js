@@ -36,7 +36,7 @@ export class AppForm extends Component {
     };
 
     // submitting form and triggering redux action for axios post
-    this.props.postSignUpForm(userData)
+    return this.props.postSignUpForm(userData)
       .then((response) => {
         if (response.data === 'Registered') {
           // redux form reset
